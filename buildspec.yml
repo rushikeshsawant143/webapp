@@ -9,16 +9,16 @@ phases:
     commands:
       - echo Nothing to do in the pre_build phase.
       - mvn install
-      - ls
-      - docker build -t docker-apache2 .
-      - aws ecr create-repository --repository-name docker-testing --region us-east-1
-      - docker tag docker-apache2 067663653687.dkr.ecr.us-east-1.amazonaws.com/docker-testing
-      - aws ecr get-login-password | docker login --username AWS --password-stdin 067663653687.dkr.ecr.us-east-1.amazonaws.com
+#       - ls
+#       - docker build -t docker-apache2 .
+#       - aws ecr create-repository --repository-name docker-testing --region us-east-1
+#       - docker tag docker-apache2 067663653687.dkr.ecr.us-east-1.amazonaws.com/docker-testing
+#       - aws ecr get-login-password | docker login --username AWS --password-stdin 067663653687.dkr.ecr.us-east-1.amazonaws.com
       
-  build:
-    commands:
-      - echo Build started on `date`
-      - docker push 067663653687.dkr.ecr.us-east-1.amazonaws.com/docker-testing
+#   build:
+#     commands:
+#       - echo Build started on `date`
+#       - docker push 067663653687.dkr.ecr.us-east-1.amazonaws.com/docker-testing
 
 
   post_build:
