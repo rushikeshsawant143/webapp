@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /opt/apache-tomcat-9.0.35/webapps/app.war
+    destination: /opt/apache-tomcat-9.0.35/webapps/test
 #   - source: /scripts/configure_http_port.xsl
 #     destination: /tmp/codedeploy-deployment-staging-area/
 # hooks:
